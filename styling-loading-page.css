@@ -1,0 +1,65 @@
+/* Styles for the head and body of the page */
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #0C0A08; /* Background color */
+    color: #A9B8D2;    /* Text color for the page */
+    font-family: 'ITCAvantGardePro-Md', sans-serif;    /* Custom font with fallback to sans-serif */ 
+}
+
+#loading-container {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 30px;
+}
+
+#loading-text {
+    font-size: 1.2em;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.button a {
+    text-align: center;
+    text-decoration: none;
+    color: #A9B8D2;    /* Text color for the page */
+    border: 2px solid #A9B8D2; /* border color */
+    border-radius: 25px; /* make borders round */
+    padding: 10px 30px 10px 30px;
+    font-size: 1.2em;
+    display: inline-block; /* Make sure the link behaves like a button */
+    margin-top: 10px;
+}
+
+.button:hover a {
+    background: #6C7BFF;    /* Text color for the page */
+    color: black;
+    border:2px solid #6C7BFF; /* border color */
+    font-family: 'ITCAvantGardePro-Bold', sans-serif;
+}
+
+#name {
+    font-family: 'ITCAvantGardePro-Bold', sans-serif;
+}
+
+
+/* Define a custom font using @font-face */
+@font-face {
+    font-family: 'ITCAvantGardePro-Bold';    /* Name of the custom font */
+    src: url('./fonts/ITCAvantGardePro-Bold.otf') format('opentype');    /* Path to the font file with format */
+
+    font-weight: bold;    /* Normal weight for the font */
+    font-style: normal;    /* Normal style for the font */
+}
+
+@font-face {
+    font-family: 'ITCAvantGardePro-Md';    /* Name of the custom font */
+    src: url('./fonts/ITCAvantGardePro-Md.otf') format('opentype');    /* Path to the font file with format */
+
+    font-weight: normal;    /* Normal weight for the font */
+    font-style: normal;    /* Normal style for the font */
+}

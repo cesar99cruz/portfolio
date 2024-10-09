@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>C&eacute;sar Cruz - Portfolio</title>
+    <link rel="icon" href="./media/logo_cesar.png" type="icon-cesar-logo">
+    <link href="./styling-loading-page.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <body>
+        <div id="loading-container">
+            <div id="name">
+                <p>C&eacute;sar Cruz</p>
+            </div>
+            <div id="loading-page-gif">
+                <img max width="200" src="./media/logo_cesar.gif" alt="logo_cesar">
+                <div id="loading-text">0%</div> <!-- Percentage display -->
+            </div>
+    
+            <div id="button" class="button" style="display: none;">
+                <a href="./">Start</a>
+            </div>
+        </div>
+    </body>
+
+
+    <script>
+        // JavaScript to animate the percentage from 0 to 100% over a set period of time
+        window.addEventListener("load", function () {
+            let percentage = 0;
+            const percentageDisplay = document.getElementById("loading-text");
+            const interval = setInterval(() => {
+                percentage++;
+                percentageDisplay.textContent = percentage + "%";  // Update the percentage display
+
+                if (percentage === 100) {
+                    clearInterval(interval);  // Stop the interval once 100% is reached
+                    document.getElementById("loading-text").style.display = "none";  // Hide the loading screen after 100%
+                    document.getElementById("button").style.display = "block"
+                }
+            }, 40);  // Adjust the speed by changing the interval time
+        });
+    </script>
+</body>
+
+</html>
