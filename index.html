@@ -8,7 +8,8 @@
     <link rel="icon" href="./media/logo_cesar.png" type="icon-cesar-logo">
     <link href="./styling.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -201,7 +202,7 @@
             <h3 class="section-title">Clients</h3>
             <div class="clients">
                 <div class="rows">
-                    <p>
+                    <p class="client-name" data-full-name="DOMUS ETHICA" data-short-name="DOMUS|">
                         DOMUS ETHICA
                         <span class="text-hidden-sections">
                             Lorem ipsum dolor sit amet, <br>
@@ -211,7 +212,7 @@
                     </p>
                 </div>
                 <div class="rows">
-                    <p>
+                    <p class="client-name" data-full-name="SÏMPLY" data-short-name="SÏMPLY">
                         SÏMPLY
                         <span class="text-hidden-sections">
                             Lorem ipsum dolor sit amet, <br>
@@ -221,7 +222,7 @@
                     </p>
                 </div>
                 <div class="rows">
-                    <p>
+                    <p class="client-name" data-full-name="VOGUE PORTUGAL" data-short-name="VOGUE|">
                         VOGUE PORTUGAL
                         <span class="text-hidden-sections">
                             Lorem ipsum dolor sit amet, <br>
@@ -231,7 +232,7 @@
                     </p>
                 </div>
                 <div class="rows">
-                    <p>
+                    <p class="client-name" data-full-name="ColorADD" data-short-name="ColorA|">
                         ColorADD
                         <span class="text-hidden-sections">
                             Lorem ipsum dolor sit amet, <br>
@@ -241,12 +242,11 @@
                     </p>
                 </div>
                 <div id="three-dots">
-                    <p>
-                        ...
-                    </p>
+                    <p>...</p>
                 </div>
             </div>
         </div>
+        
 
         <br><br><br>
         <br><br><br>
@@ -259,7 +259,7 @@
                 <source src="./media/Placeholder-Video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>        
+        </div>
 
         <br><br><br>
         <br><br><br>
@@ -297,32 +297,35 @@
                     <h3>LET'S WORK TOGETHER</h3>
                     <div class="first-line">
                         <input type="contact-name" id="contact-name" placeholder="Name" autocomplete="off" required>
-                        <input type="contact-subject" id="contact-subject" placeholder="Subject" autocomplete="off" required>
+                        <input type="contact-subject" id="contact-subject" placeholder="Subject" autocomplete="off"
+                            required>
                     </div>
-                    <textarea name="contact-textarea" id="contact-textarea" placeholder="How can I Help?" cols="71" rows="5"  autocomplete="off" required></textarea><br>
+                    <textarea name="contact-textarea" id="contact-textarea" placeholder="How can I Help?" cols="71"
+                        rows="5" autocomplete="off" required></textarea><br>
                     <button type="submit" id="submit" onclick="sendMail()">Submit</button>
                 </div>
                 <div class="footer-right">
                     <div class="contacts">
                         <div class="email">
                             <p>
-                                Email <br>
-                                <span>
-                                    cesar.cruz@live.com.pt
-                                </span>
+                                <span class="email-label">Email</span> <br>
+                                <span class="email">cesar.cruz@live.com.pt</span>
+                                <span class="alternate-text">100% chance I'll answer</span>
                             </p>
                         </div>
                     </div>
                     <div class="phone">
                         <p>
-                            Phone <br>
-                            <span>
-                                +351 968 580 096
-                            </span>
+                            <span class="phone-label">Phone</span> <br>
+                            <span class="phone-number">+351 968 580 096</span>
+                            <span class="alternate-text">90% chance I don't pick up</span>
                         </p>
                     </div>
                 </div>
             </div>
+            <h1 class="footer-heading">
+                LET'S COLLABORATE
+            </h1>
         </footer>
     </section>
 

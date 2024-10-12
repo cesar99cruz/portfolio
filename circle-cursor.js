@@ -289,3 +289,61 @@ function sendMail() {
     var message = $('#contact-textarea').val();
     window.location.href = 'mailto:cesar.cruz@live.com.pt?subject= ' + name + ' (' + subject + ')' + '&body=' + message;
 };
+
+const emailElement = document.querySelectorAll('.email');
+
+emailElement.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over name
+        link.style.color = '';  // Change text color to black when circle disappears
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+        link.style.color = '';  // Reset text color back to original when circle reappears
+    });
+});
+
+const phoneElement = document.querySelectorAll('.phone');
+
+phoneElement.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over name
+        link.style.color = '';  // Change text color to black when circle disappears
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+        link.style.color = '';  // Reset text color back to original when circle reappears
+    });
+});
+
+// Select all client-name elements
+const clientNames = document.querySelectorAll('.client-name');
+
+clientNames.forEach(client => {
+    const fullName = client.getAttribute('data-full-name');
+    const shortName = client.getAttribute('data-short-name');
+    const hiddenText = client.querySelector('.text-hidden-sections'); // Get the hidden text
+
+    // Ensure hidden text starts hidden
+    hiddenText.style.opacity = '0';
+    hiddenText.style.transition = 'opacity 0.3s ease'; // Add transition for smoothness
+
+    client.addEventListener('mouseenter', () => {
+        // Change only the text part (excluding the hidden text)
+        client.innerHTML = `${shortName} `; // Set to short name
+        client.appendChild(hiddenText); // Re-add the hidden text
+        hiddenText.style.opacity = '1'; // Reveal hidden text
+    });
+
+    client.addEventListener('mouseleave', () => {
+        // Revert back to full name and hide hidden text
+        client.innerHTML = `${fullName} `; // Set to full name
+        client.appendChild(hiddenText); // Re-add the hidden text
+        hiddenText.style.opacity = '0'; // Hide the hidden text
+    });
+});
+
+
+

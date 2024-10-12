@@ -1,167 +1,250 @@
     /* Styles for the head and body of the page */
     body {
         margin: 0;
-        background-color: #0C0A08; /* Background color for the page */
-        color: #A9B8D2; /* Text color for the page */
-        font-family: 'ITCAvantGardePro-Md', sans-serif; /* Font family */
-        cursor: context-menu; /* Cursor style */
+        background-color: #0C0A08;
+        /* Background color for the page */
+        color: #A9B8D2;
+        /* Text color for the page */
+        font-family: 'ITCAvantGardePro-Md', sans-serif;
+        /* Font family */
+        cursor: context-menu;
+        /* Cursor style */
         overflow-x: hidden;
+        padding: 0;
+        height: 100%; /* This ensures the footer sticks to the bottom if needed */
     }
 
     /* Styles for the Navbar */
     #navbar {
-        display: flex; /* Use flexbox layout */
-        justify-content: space-between; /* Space items evenly with space between */
-        padding: 50px 50px 0px 50px; /* Padding around the navbar */
-        align-items: center; /* Center items vertically */
-        text-align: right; /* Align text to the right */
-        position: sticky; /* Make the navbar sticky */
-        top: 0; /* Stick to the top of the viewport */
-        z-index: 1000; /* Ensure the navbar stays on top of other content */
+        display: flex;
+        /* Use flexbox layout */
+        justify-content: space-between;
+        /* Space items evenly with space between */
+        padding: 50px 50px 0px 50px;
+        /* Padding around the navbar */
+        align-items: center;
+        /* Center items vertically */
+        text-align: right;
+        /* Align text to the right */
+        position: sticky;
+        /* Make the navbar sticky */
+        top: 0;
+        /* Stick to the top of the viewport */
+        z-index: 1000;
+        /* Ensure the navbar stays on top of other content */
     }
 
     #vertical-navbar {
-        display: flex; /* Use flexbox layout */
-        justify-content: space-between; /* Space items evenly with space between */
+        display: flex;
+        /* Use flexbox layout */
+        justify-content: space-between;
+        /* Space items evenly with space between */
         margin-top: -90px;
-        padding: 0px 10px 0px 90px; /* Padding around the navbar */
-        text-align: center; /* Align text to the center */
-        position: sticky; /* Make the navbar sticky */
-        top: 620px; /* Stick to the top of the viewport */
-        z-index: 1000; /* Ensure the navbar stays on top of other content */
+        padding: 0px 10px 0px 90px;
+        /* Padding around the navbar */
+        text-align: center;
+        /* Align text to the center */
+        position: sticky;
+        /* Make the navbar sticky */
+        top: 620px;
+        /* Stick to the top of the viewport */
+        z-index: 1000;
+        /* Ensure the navbar stays on top of other content */
     }
 
     /* Styles for the navbar links container */
     .navbar-links {
-        display: flex; /* Use flexbox for layout */
-        cursor: pointer; /* Change cursor to pointer on hover */
-        flex-direction: column; /* Arrange links vertically */
-        gap: 7px; /* Space between links */
+        display: flex;
+        /* Use flexbox for layout */
+        cursor: pointer;
+        /* Change cursor to pointer on hover */
+        flex-direction: column;
+        /* Arrange links vertically */
+        gap: 7px;
+        /* Space between links */
     }
 
     /* Styles for individual links in the navbar */
     .navbar-links a {
-        text-decoration: none; /* Remove underline from links */
-        color: #6E7887; /* Main color for active link */
-        font-size: 1.2em; /* Font size for links */
-        transition: color 0.3s ease; /* Smooth transition for color change */
+        text-decoration: none;
+        /* Remove underline from links */
+        color: #6E7887;
+        /* Main color for active link */
+        font-size: 1.2em;
+        /* Font size for links */
+        transition: color 0.3s ease;
+        /* Smooth transition for color change */
     }
 
     .navbar-links a.active {
-        color: #A9B8D2; /* Active link color */
+        color: #A9B8D2;
+        /* Active link color */
     }
 
     /* Styles for the main heading in the text-center */
-    .text-center h1{
-        margin-top: 100px; /* Adjust this value as needed to move it higher */
-        background-color: transparent; /* Transparent background */
-        text-align: center; /* Center the heading text */
-        font-size: 100pt; /* Large font size for heading */
-        font-family: 'ITCAvantGardePro-Bold', sans-serif; /* Bold font */
+    .text-center h1 {
+        margin-top: 100px;
+        /* Adjust this value as needed to move it higher */
+        background-color: transparent;
+        /* Transparent background */
+        text-align: center;
+        /* Center the heading text */
+        font-size: 100pt;
+        /* Large font size for heading */
+        font-family: 'ITCAvantGardePro-Bold', sans-serif;
+        /* Bold font */
     }
 
     /* Styles for colored text */
     .color-font {
-        color: #6C7BFF; /* Color for specific text (e.g., 'creative') */
+        color: #6C7BFF;
+        /* Color for specific text (e.g., 'creative') */
     }
 
     .secondary-color-text {
-        color: #6E7887; /* Secondary color text */
+        color: #6E7887;
+        /* Secondary color text */
     }
 
     /* Define a custom font using @font-face */
     @font-face {
-        font-family: 'ITCAvantGardePro-Bold'; /* Name of the custom font */
-        src: url('./fonts/ITCAvantGardePro-Bold.otf') format('opentype'); /* Path to the font file */
-        font-weight: bold; /* Normal weight for the font */
-        font-style: normal; /* Normal style for the font */
+        font-family: 'ITCAvantGardePro-Bold';
+        /* Name of the custom font */
+        src: url('./fonts/ITCAvantGardePro-Bold.otf') format('opentype');
+        /* Path to the font file */
+        font-weight: bold;
+        /* Normal weight for the font */
+        font-style: normal;
+        /* Normal style for the font */
     }
 
     @font-face {
-        font-family: 'ITCAvantGardePro-Md'; /* Name of the custom font */
-        src: url('./fonts/ITCAvantGardePro-Md.otf') format('opentype'); /* Path to the font file */
-        font-weight: normal; /* Normal weight for the font */
-        font-style: normal; /* Normal style for the font */
+        font-family: 'ITCAvantGardePro-Md';
+        /* Name of the custom font */
+        src: url('./fonts/ITCAvantGardePro-Md.otf') format('opentype');
+        /* Path to the font file */
+        font-weight: normal;
+        /* Normal weight for the font */
+        font-style: normal;
+        /* Normal style for the font */
     }
 
     /* Hover effect for navbar links */
     .navbar-links a:hover {
-        text-decoration: none; /* Maintain no underline on hover */
+        text-decoration: none;
+        /* Maintain no underline on hover */
     }
 
     .social-media-icons {
-        display: flex; /* Use flexbox for layout */
-        cursor: pointer; /* Change cursor to pointer on hover */
-        flex-direction: column; /* Arrange icons vertically */
-        gap: 30px; /* Space between icons */
-        position: fixed; /* Fixed position */
-        bottom: 80px; /* Position from bottom */
+        display: flex;
+        /* Use flexbox for layout */
+        cursor: pointer;
+        /* Change cursor to pointer on hover */
+        flex-direction: column;
+        /* Arrange icons vertically */
+        gap: 30px;
+        /* Space between icons */
+        position: fixed;
+        /* Fixed position */
+        bottom: 80px;
+        /* Position from bottom */
     }
 
     .social-media-icons a {
-        color: #A9B8D2; /* Base color for the icons */
-        clip-path: none; /* Ensure no initial clipping */
-        transition: none; /* Disable transition effects for immediate change */
+        color: #A9B8D2;
+        /* Base color for the icons */
+        clip-path: none;
+        /* Ensure no initial clipping */
+        transition: none;
+        /* Disable transition effects for immediate change */
     }
 
     .social-media-icons a img {
-        transition: all 0.3s ease; /* Smooth transition for the icons */
+        transition: all 0.3s ease;
+        /* Smooth transition for the icons */
     }
 
     /* Hover effect to make icons black */
     .social-media-icons a:hover img {
-        filter: brightness(0) invert(0); /* Turns the image black */
-        transform: scale(1.1); /* Slight scale up */
-        transition: 0.3s ease-in-out; /* Smooth transition */
+        filter: brightness(0) invert(0);
+        /* Turns the image black */
+        transform: scale(1.1);
+        /* Slight scale up */
+        transition: 0.3s ease-in-out;
+        /* Smooth transition */
     }
 
     #my-name {
-        color: #A9B8D2; /* Color for the name */
-        display: inline-block; /* Make the div an inline-block */
-        transform: rotate(-90deg); /* Rotate the text 90 degrees to the right */
-        align-items: right; /* Align items to the right */
-        font-size: 1.1em; /* Font size for name */
-        position: fixed; /* Fixed position */
-        right: 20px; /* Position from right */
-        bottom: 110px; /* Position from bottom */
+        color: #A9B8D2;
+        /* Color for the name */
+        display: inline-block;
+        /* Make the div an inline-block */
+        transform: rotate(-90deg);
+        /* Rotate the text 90 degrees to the right */
+        align-items: right;
+        /* Align items to the right */
+        font-size: 1.1em;
+        /* Font size for name */
+        position: fixed;
+        /* Fixed position */
+        right: 20px;
+        /* Position from right */
+        bottom: 110px;
+        /* Position from bottom */
     }
 
     .bold-text {
-        font-weight: bold; /* Bold text */
+        font-weight: bold;
+        /* Bold text */
     }
 
     /* About Section */
     .about-section {
-        margin-top: 230px; /* Space above section */
-        font-family: 'ITCAvantGardePro-Md', sans-serif; /* Font family */
-        border: 1px transparent; /* Transparent border */
+        margin-top: 230px;
+        /* Space above section */
+        font-family: 'ITCAvantGardePro-Md', sans-serif;
+        /* Font family */
+        border: 1px transparent;
+        /* Transparent border */
     }
 
     /* Section Titles */
     .section-title {
-        font-size: 1.5em; /* Font size for section title */
-        margin-left: 280px; /* Left margin */
-        font-weight: 400;   
+        font-size: 1.5em;
+        /* Font size for section title */
+        margin-left: 280px;
+        /* Left margin */
+        font-weight: 400;
         letter-spacing: 5px;
     }
 
     .section-text {
-        font-size: 4.5em; /* Font size for section text */
-        margin-left: 280px; /* Left margin */
+        font-size: 4.5em;
+        /* Font size for section text */
+        margin-left: 280px;
+        /* Left margin */
     }
 
     .what-i-do {
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Arrange items vertically */
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: column;
+        /* Arrange items vertically */
     }
 
     .what-i-do p {
-        font-size: 8em; /* Font size for items */
-        font-family: 'ITCAvantGardePro-Bold'; /* Bold font */
-        position: relative; /* Position relative for pseudo-element */
-        display: block; /* Ensure it takes up the full block width */
-        transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-        z-index: 2; /* Layering */
+        font-size: 8em;
+        /* Font size for items */
+        font-family: 'ITCAvantGardePro-Bold';
+        /* Bold font */
+        position: relative;
+        /* Position relative for pseudo-element */
+        display: block;
+        /* Ensure it takes up the full block width */
+        transition: color 0.3s ease, transform 0.3s ease;
+        /* Smooth transitions */
+        z-index: 2;
+        /* Layering */
         border-top: 1px solid #A9B8D2;
         border-bottom: 1px solid #A9B8D2;
         padding-left: 280px;
@@ -170,41 +253,56 @@
 
     /* Create the full-width square effect on hover using the ::before pseudo-element */
     .what-i-do p::before {
-        content: ''; /* Empty content */
-        position: absolute; /* Position absolutely */
-        top: 0; /* Align to the top */
-        width: 100vw; /* Full width of the viewport */
-        height: 100%; /* Full height */
-        z-index: -1; /* Place it behind the text */
-        opacity: 0; /* Initially hidden */
+        content: '';
+        /* Empty content */
+        position: absolute;
+        /* Position absolutely */
+        top: 0;
+        /* Align to the top */
+        width: 100vw;
+        /* Full width of the viewport */
+        height: 100%;
+        /* Full height */
+        z-index: -1;
+        /* Place it behind the text */
+        opacity: 0;
+        /* Initially hidden */
     }
 
     /* Show the square on hover */
     .what-i-do p:hover::before {
-        opacity: 1; /* Reveal on hover */
+        opacity: 1;
+        /* Reveal on hover */
         background-color: transparent;
     }
 
     /* Change text color on hover */
     .what-i-do p:hover {
-        color: #0C0A08; /* Change text color */
+        color: #0C0A08;
+        /* Change text color */
         background-color: #6C7BFF;
         border-top: none;
         border-bottom: none;
     }
 
     .text-hidden-sections {
-        opacity: 0; /* Start hidden */
-        margin-top: -160px; /* Adjust position */
-        text-align: left; /* Align text to the left */
-        display: flex; /* Flex display */
+            opacity: 0;
+            transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */        
+        margin-top: -160px;
+        /* Adjust position */
+        text-align: left;
+        /* Align text to the left */
+        display: flex;
+        /* Flex display */
         font-size: 0.3em !important;
-        padding-left: 600px; /* Padding left */
+        padding-left: 600px;
+        /* Padding left */
     }
 
     /* Reveal hidden text on hover */
     .text-hidden-sections:hover {
-        opacity: 1; /* Reveal on hover */
+        opacity: 1;
+        /* Reveal on hover */
     }
 
     .rows {
@@ -217,69 +315,106 @@
 
     /* Works Section */
     .works-section {
-        margin-top: 230px; /* Space above section */
-        font-family: 'ITCAvantGardePro-Md', sans-serif; /* Font family */
-        border: 1px transparent; /* Transparent border */
-        max-width: 100%; /* Full width */
-        background-image: url('./media/placeholder.jpg'); /* Background image */
-        background-size: cover; /* Cover the entire section */
-        background-position: center; /* Center the background image */
-        padding-top: 200px; /* Padding above */
-        padding-bottom: 200px; /* Padding below */
+        margin-top: 230px;
+        /* Space above section */
+        font-family: 'ITCAvantGardePro-Md', sans-serif;
+        /* Font family */
+        border: 1px transparent;
+        /* Transparent border */
+        max-width: 100%;
+        /* Full width */
+        background-image: url('./media/placeholder.jpg');
+        /* Background image */
+        background-size: cover;
+        /* Cover the entire section */
+        background-position: center;
+        /* Center the background image */
+        padding-top: 200px;
+        /* Padding above */
+        padding-bottom: 200px;
+        /* Padding below */
     }
 
     .works-section h3 {
-        margin-left: 280px; /* Left margin */
+        margin-left: 280px;
+        /* Left margin */
     }
 
     .works-section p {
-        margin-left: 280px; /* Left margin */
+        margin-left: 280px;
+        /* Left margin */
     }
 
     /* Circle element for the hover effect */
     .circle {
-        width: 50px; /* Circle width */
-        height: 50px; /* Circle height */
-        background-color: #6C7BFF; /* Circle color */
-        border-radius: 50%; /* Make it a circle */
-        position: fixed; /* Fixed position */
-        pointer-events: none; /* Prevent interactions */
-        transform: translate(-50%, -50%) scale(1); /* Center the circle */
-        transition: transform 0.3s ease; /* Smooth scaling transition */
-        animation-delay: 0.5ms; /* Delay for animation */
+        width: 50px;
+        /* Circle width */
+        height: 50px;
+        /* Circle height */
+        background-color: #6C7BFF;
+        /* Circle color */
+        border-radius: 50%;
+        /* Make it a circle */
+        position: fixed;
+        /* Fixed position */
+        pointer-events: none;
+        /* Prevent interactions */
+        transform: translate(-50%, -50%) scale(1);
+        /* Center the circle */
+        transition: transform 0.3s ease;
+        /* Smooth scaling transition */
+        animation-delay: 0.5ms;
+        /* Delay for animation */
     }
 
     /* Hidden text styles */
     .hidden-text {
-        opacity: 0; /* Start hidden */
-        background-color: transparent; /* Transparent background */
-        font-size: 100pt; /* Large font size */
-        font-family: 'ITCAvantGardePro-Bold', sans-serif; /* Bold font */
-        width: 100%; /* Full width for masking */
+        opacity: 0;
+        /* Start hidden */
+        background-color: transparent;
+        /* Transparent background */
+        font-size: 100pt;
+        /* Large font size */
+        font-family: 'ITCAvantGardePro-Bold', sans-serif;
+        /* Bold font */
+        width: 100%;
+        /* Full width for masking */
     }
 
     /* Styles for hiding text */
     #hidding-text-div {
-        position: relative; /* Position relative for child elements */
-        overflow: hidden; /* Hide overflow */
+        position: relative;
+        /* Position relative for child elements */
+        overflow: hidden;
+        /* Hide overflow */
     }
 
     /* Apply masking effect */
     #hidding-text-div:after {
-        content: ''; /* Empty content */
-        position: absolute; /* Absolute positioning */
-        top: 0; /* Align to the top */
-        left: 0; /* Align to the left */
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        background: rgba(12, 10, 8, 0.8); /* Semi-transparent overlay */
-        transition: opacity 0.5s; /* Transition for smooth reveal */
-        opacity: 0; /* Start hidden */
+        content: '';
+        /* Empty content */
+        position: absolute;
+        /* Absolute positioning */
+        top: 0;
+        /* Align to the top */
+        left: 0;
+        /* Align to the left */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        background: rgba(12, 10, 8, 0.8);
+        /* Semi-transparent overlay */
+        transition: opacity 0.5s;
+        /* Transition for smooth reveal */
+        opacity: 0;
+        /* Start hidden */
     }
 
     /* Reveal the mask on hover */
     #hidding-text-div:hover:after {
-        opacity: 1; /* Reveal on hover */
+        opacity: 1;
+        /* Reveal on hover */
     }
 
     .line-hidden {
@@ -299,22 +434,31 @@
 
     /* Show the "Design" text when hovering over the entire .rows div */
     .rows-history:hover .text-hidden-sections-smaller {
-        opacity: 1; /* Make it visible on hover */
+        opacity: 1;
+        /* Make it visible on hover */
     }
 
     /* Maintain existing styles */
     .history {
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Arrange items vertically */
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: column;
+        /* Arrange items vertically */
     }
 
     .history p {
-        font-size: 8em; /* Font size for items */
-        font-family: 'ITCAvantGardePro-Bold'; /* Bold font */
-        position: relative; /* Position relative for pseudo-element */
-        display: block; /* Ensure it takes up the full block width */
-        transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-        z-index: 2; /* Layering */
+        font-size: 8em;
+        /* Font size for items */
+        font-family: 'ITCAvantGardePro-Bold';
+        /* Bold font */
+        position: relative;
+        /* Position relative for pseudo-element */
+        display: block;
+        /* Ensure it takes up the full block width */
+        transition: color 0.3s ease, transform 0.3s ease;
+        /* Smooth transitions */
+        z-index: 2;
+        /* Layering */
         border-top: 1px solid #A9B8D2;
         border-bottom: 1px solid #A9B8D2;
         padding-left: 280px;
@@ -323,24 +467,33 @@
 
     /* Create the full-width square effect on hover using the ::before pseudo-element */
     .history p::before {
-        content: ''; /* Empty content */
-        position: absolute; /* Position absolutely */
-        top: 0; /* Align to the top */
-        width: 100vw; /* Full width of the viewport */
-        height: 100%; /* Full height */
-        z-index: -1; /* Place it behind the text */
-        opacity: 0; /* Initially hidden */
+        content: '';
+        /* Empty content */
+        position: absolute;
+        /* Position absolutely */
+        top: 0;
+        /* Align to the top */
+        width: 100vw;
+        /* Full width of the viewport */
+        height: 100%;
+        /* Full height */
+        z-index: -1;
+        /* Place it behind the text */
+        opacity: 0;
+        /* Initially hidden */
     }
 
     /* Show the square on hover */
     .history p:hover::before {
-        opacity: 1; /* Reveal on hover */
+        opacity: 1;
+        /* Reveal on hover */
         background-color: transparent;
     }
 
     /* Change text color on hover */
     .history p:hover {
-        color: #0C0A08; /* Change text color */
+        color: #0C0A08;
+        /* Change text color */
         background-color: #6C7BFF;
         border-top: none;
         border-bottom: none;
@@ -348,7 +501,8 @@
 
     .text-sections {
         opacity: 1 !important;
-        padding-left: 100px; /* Ensure this is correct */
+        padding-left: 100px;
+        /* Ensure this is correct */
     }
 
     .columns {
@@ -357,17 +511,25 @@
 
 
     .clients {
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Arrange items vertically */
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: column;
+        /* Arrange items vertically */
     }
 
     .clients p {
-        font-size: 8em; /* Font size for items */
-        font-family: 'ITCAvantGardePro-Bold'; /* Bold font */
-        position: relative; /* Position relative for pseudo-element */
-        display: block; /* Ensure it takes up the full block width */
-        transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-        z-index: 2; /* Layering */
+        font-size: 8em;
+        /* Font size for items */
+        font-family: 'ITCAvantGardePro-Bold';
+        /* Bold font */
+        position: relative;
+        /* Position relative for pseudo-element */
+        display: block;
+        /* Ensure it takes up the full block width */
+        transition: color 0.3s ease, transform 0.3s ease;
+        /* Smooth transitions */
+        z-index: 2;
+        /* Layering */
         border-top: 1px solid #A9B8D2;
         border-bottom: 1px solid #A9B8D2;
         padding-left: 280px;
@@ -376,99 +538,124 @@
 
     /* Create the full-width square effect on hover using the ::before pseudo-element */
     .clients p::before {
-        content: ''; /* Empty content */
-        position: absolute; /* Position absolutely */
-        top: 0; /* Align to the top */
-        width: 100vw; /* Full width of the viewport */
-        height: 100%; /* Full height */
-        z-index: -1; /* Place it behind the text */
-        opacity: 0; /* Initially hidden */
+        content: '';
+        /* Empty content */
+        position: absolute;
+        /* Position absolutely */
+        top: 0;
+        /* Align to the top */
+        width: 100vw;
+        /* Full width of the viewport */
+        height: 100%;
+        /* Full height */
+        z-index: -1;
+        /* Place it behind the text */
+        opacity: 0;
+        /* Initially hidden */
     }
 
     /* Show the square on hover */
     .clients p:hover::before {
-        opacity: 1; /* Reveal on hover */
+        opacity: 1;
+        /* Reveal on hover */
         background-color: transparent;
     }
 
     /* Change text color on hover */
     .clients p:hover {
-        color: #0C0A08; /* Change text color */
+        color: #0C0A08;
+        /* Change text color */
         background-color: #6C7BFF;
         border-top: none;
         border-bottom: none;
     }
 
     .text-hidden-sections {
-        opacity: 0; /* Start hidden */
-        margin-top: -160px; /* Adjust position */
-        text-align: left; /* Align text to the left */
-        display: flex; /* Flex display */
+        opacity: 0;
+        /* Start hidden */
+        margin-top: -160px;
+        /* Adjust position */
+        text-align: left;
+        /* Align text to the left */
+        display: flex;
+        /* Flex display */
         font-size: 0.3em !important;
-        padding-left: 600px; /* Padding left */
+        padding-left: 600px;
+        /* Padding left */
     }
 
     /* Reveal hidden text on hover */
     .text-hidden-sections:hover {
-        opacity: 1; /* Reveal on hover */
+        opacity: 1;
+        /* Reveal on hover */
     }
 
-    #three-dots{
+    #three-dots {
         font-weight: 8em;
         border-top: none;
         border-bottom: none;
     }
 
-    #scrollVideo{
+    #scrollVideo {
         margin: 0;
     }
 
-    .motto{
-        background-color: transparent !important; /* Transparent background */
-        text-align: center !important; /* Center the heading text */
-        font-size: 1.2em !important; /* Large font size for heading */
-        font-family: 'ITCAvantGardePro-Md', sans-serif !important; /* Bold font */
+    .motto {
+        background-color: transparent !important;
+        /* Transparent background */
+        text-align: center !important;
+        /* Center the heading text */
+        font-size: 1.2em !important;
+        /* Large font size for heading */
+        font-family: 'ITCAvantGardePro-Md', sans-serif !important;
+        /* Bold font */
     }
 
-    .motto h3{
+    .motto h3 {
         letter-spacing: 5px;
         margin-bottom: -60px;
-        font-weight: 400;   
+        font-weight: 400;
     }
 
     .motto p {
-        margin-top: 100px !important; /* Adjust this value as needed to move it higher */
-        background-color: transparent !important; /* Transparent background */
-        text-align: center !important; /* Center the heading text */
-        font-size: 100pt !important; /* Large font size for heading */
-        font-family: 'ITCAvantGardePro-Bold', sans-serif !important; /* Bold font */
+        margin-top: 100px !important;
+        /* Adjust this value as needed to move it higher */
+        background-color: transparent !important;
+        /* Transparent background */
+        text-align: center !important;
+        /* Center the heading text */
+        font-size: 100pt !important;
+        /* Large font size for heading */
+        font-family: 'ITCAvantGardePro-Bold', sans-serif !important;
+        /* Bold font */
     }
 
-    .motto h6{
+    .motto h6 {
         margin-top: -80px;
         letter-spacing: 5px;
     }
 
-    .footer-container{
+    .footer-container {
         padding: 0 300px;
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
 
-    .footer-container h3{
+    .footer-container h3 {
         display: flex;
         font-size: 33.5px;
         letter-spacing: 10px;
     }
 
-    .first-line{
+    .first-line {
         display: inline-flex;
         gap: 40px;
-        margin-bottom: 20px;    
+        margin-bottom: 20px;
     }
 
-    input{
-        background-color: #0C0A08;
+    input {
+        background-color: transparent;
         color: #A9B8D2;
         border: 2px solid #A9B8D2;
         padding-top: 5px;
@@ -476,47 +663,182 @@
         padding-right: 78px;
         padding-bottom: 15px;
         border-radius: 12px;
-        font-family: 'ITCAvantGardePro-Md', sans-serif !important; /* Bold font */
+        font-family: 'ITCAvantGardePro-Md', sans-serif !important;
+        /* Bold font */
     }
 
-    textarea{
-        background-color: #0C0A08;
+    textarea {
+        background-color: transparent;
         color: #A9B8D2;
         border: 2px solid #A9B8D2;
         padding-top: 5px;
         padding-left: 10px;
         padding-bottom: 55px;
         border-radius: 12px;
-        font-family: 'ITCAvantGardePro-Md', sans-serif !important; /* Bold font */
+        font-family: 'ITCAvantGardePro-Md', sans-serif !important;
+        /* Bold font */
     }
 
-    button{
+    button {
         margin-top: 30px;
-        background-color: #0C0A08;
+        background-color: transparent;
         color: #A9B8D2;
         border: 2px solid #A9B8D2;
         border-radius: 12px;
-        margin-bottom: 200px;
         padding: 5px 20px;
     }
 
-    button:hover{
+    button:hover {
+        margin-top: 30px;
         background-color: #6C7BFF;
         color: #0C0A08;
         border: 2px solid #6C7BFF;
-        font-family: 'ITCAvantGardePro-Bold', sans-serif !important; /* Bold font */
+        border-radius: 12px;
+        padding: 5px 20px;
         cursor: pointer;
     }
 
-  .footer-right{
-    flex: 1 1;
-    padding-top: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .footer-left{
-    flex: 1 1;
-    padding-right: 120px;
-  }
+    .footer-right {
+        flex: 1 1;
+        padding-top: 120px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-left {
+        flex: 1 1;
+        padding-right: 120px;
+    }
+
+    .email p {
+        padding: 10px;
+        margin: 0;
+        position: relative;
+    }
+
+    .email span {
+        font-weight: 400;
+        transition: opacity 0.3s ease, color 0.3s ease;
+        /* Smooth transition */
+    }
+
+    /* Initially hide the alternate text */
+    .alternate-text {
+        opacity: 0;
+        position: absolute;
+        top: 10px;
+        /* Align to where "Phone" was */
+        left: 10px;
+        transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        /* Smooth fade-in effect */
+    }
+
+    /* Hide the "Phone" label and show alternate text on hover */
+    .email:hover .email-label {
+        opacity: 0;
+    }
+
+    .email:hover .alternate-text {
+        opacity: 1;
+        font-family: 'ITCAvantGardePro-Bold', sans-serif !important;
+    }
+
+    /* Add hover effect to change background and text color */
+    .email:hover {
+        background-color: #6C7BFF;
+        /* Change background color */
+        color: #0C0A08;
+        /* Change text color */
+    }
+
+    /* Ensure phone number stays visible and unchanged */
+    .email {
+        opacity: 1;
+        /* Ensure phone number is always visible */
+        transition: none;
+        /* No effect on the phone number */
+    }
+
+    .phone p {
+        padding: 10px;
+        margin: 0;
+        position: relative;
+    }
+
+    .phone span {
+        font-weight: 400;
+        transition: opacity 0.3s ease, color 0.3s ease;
+        /* Smooth transition */
+    }
+
+    /* Initially hide the alternate text */
+    .alternate-text {
+        opacity: 0;
+        position: absolute;
+        top: 10px;
+        /* Align to where "Phone" was */
+        left: 10px;
+        transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        /* Smooth fade-in effect */
+    }
+
+    /* Hide the "Phone" label and show alternate text on hover */
+    .phone:hover .phone-label {
+        opacity: 0;
+    }
+
+    .phone:hover .alternate-text {
+        opacity: 1;
+        font-family: 'ITCAvantGardePro-Bold', sans-serif !important;
+    }
+
+    /* Add hover effect to change background and text color */
+    .phone:hover {
+        background-color: #6C7BFF;
+        /* Change background color */
+        color: #0C0A08;
+        /* Change text color */
+    }
+
+    /* Ensure phone number stays visible and unchanged */
+    .phone-number {
+        opacity: 1;
+        /* Ensure phone number is always visible */
+        transition: none;
+        /* No effect on the phone number */
+    }
+
+/* The footer container should be positioned relative to its contents */
+footer {
+    position: relative;
+    height: auto;
+    padding-bottom: 0; /* No extra padding at the bottom */
+    margin-bottom: 0; /* Remove margin */
+    overflow: hidden; /* To prevent overflow caused by transformed text */
+}
+
+/* Keep the main container relative to position elements inside */
+.footer-container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the footer-heading */
+    margin-bottom: 80px;
+}
+
+/* Styling for the LET'S COLLABORATE text */
+.footer-heading {
+    margin: 0;
+    transform: scaleY(7.6); /* Stretch the text vertically */
+    font-size: 100px; /* Adjusted for scaling */
+    letter-spacing: 45.2px; /* Space between the letters */
+    width: 100%; /* Full width */
+    padding: 0;
+    text-align: center; /* Center the text */
+    opacity: 0.05; /* Lower the opacity */
+    position: absolute; /* Position it absolutely within the footer */
+    bottom: 100px; /* Adjust this value to move the text higher */
+    left: 0; /* Align it to the left */
+    z-index: 0; /* Ensure it's behind the content */
+}
+
 
