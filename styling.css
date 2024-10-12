@@ -11,7 +11,8 @@
         /* Cursor style */
         overflow-x: hidden;
         padding: 0;
-        height: 100%; /* This ensures the footer sticks to the bottom if needed */
+        height: 100%;
+        /* This ensures the footer sticks to the bottom if needed */
     }
 
     /* Styles for the Navbar */
@@ -80,6 +81,8 @@
         color: #A9B8D2;
         /* Active link color */
     }
+
+
 
     /* Styles for the main heading in the text-center */
     .text-center h1 {
@@ -219,7 +222,7 @@
     }
 
     .section-text {
-        font-size: 4.5em;
+        font-size: 3.2em !important;
         /* Font size for section text */
         margin-left: 280px;
         /* Left margin */
@@ -286,17 +289,19 @@
     }
 
     .text-hidden-sections {
-            opacity: 0;
-            transition: opacity 0.3s ease; /* Smooth transition for showing/hiding */        
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        /* Smooth transition for showing/hiding */
         margin-top: -160px;
         /* Adjust position */
         text-align: left;
         /* Align text to the left */
         display: flex;
         /* Flex display */
-        font-size: 0.3em !important;
+        font-size: 0.25em !important;
         padding-left: 600px;
         /* Padding left */
+        padding-right: 250px !important;
     }
 
     /* Reveal hidden text on hover */
@@ -315,25 +320,53 @@
 
     /* Works Section */
     .works-section {
-        margin-top: 230px;
-        /* Space above section */
+        position: relative;
+        /* Make the section position relative */
         font-family: 'ITCAvantGardePro-Md', sans-serif;
         /* Font family */
-        border: 1px transparent;
-        /* Transparent border */
         max-width: 100%;
         /* Full width */
-        background-image: url('./media/placeholder.jpg');
-        /* Background image */
-        background-size: cover;
-        /* Cover the entire section */
-        background-position: center;
-        /* Center the background image */
         padding-top: 200px;
         /* Padding above */
         padding-bottom: 200px;
         /* Padding below */
+        overflow: hidden;
+        /* Prevents content overflow */
     }
+
+    /* Pseudo-element for background image */
+    .works-section::before {
+        content: "";
+        /* Required for pseudo-elements */
+        position: absolute;
+        /* Position it absolutely within the section */
+        top: 0;
+        /* Align to the top */
+        left: 0;
+        /* Align to the left */
+        right: 0;
+        /* Stretch to the right */
+        bottom: 0;
+        /* Stretch to the bottom */
+        background-image: url('./media/me2.jpg');
+        /* Set the background image */
+        background-size: cover;
+        /* Cover the entire section */
+        background-position: center;
+        /* Center the background image */
+        opacity: 0.2;
+        /* Set the opacity for the background */
+        z-index: 0;
+        /* Send it to the back */
+    }
+
+    .works-section>* {
+        position: relative;
+        /* Make child elements relative to keep them above the pseudo-element */
+        z-index: 1;
+        /* Ensure content is above the background */
+    }
+
 
     .works-section h3 {
         margin-left: 280px;
@@ -365,6 +398,7 @@
         /* Smooth scaling transition */
         animation-delay: 0.5ms;
         /* Delay for animation */
+        z-index: 999;
     }
 
     /* Hidden text styles */
@@ -570,26 +604,6 @@
         border-bottom: none;
     }
 
-    .text-hidden-sections {
-        opacity: 0;
-        /* Start hidden */
-        margin-top: -160px;
-        /* Adjust position */
-        text-align: left;
-        /* Align text to the left */
-        display: flex;
-        /* Flex display */
-        font-size: 0.3em !important;
-        padding-left: 600px;
-        /* Padding left */
-    }
-
-    /* Reveal hidden text on hover */
-    .text-hidden-sections:hover {
-        opacity: 1;
-        /* Reveal on hover */
-    }
-
     #three-dots {
         font-weight: 8em;
         border-top: none;
@@ -772,18 +786,7 @@
         /* Smooth transition */
     }
 
-    /* Initially hide the alternate text */
-    .alternate-text {
-        opacity: 0;
-        position: absolute;
-        top: 10px;
-        /* Align to where "Phone" was */
-        left: 10px;
-        transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-        /* Smooth fade-in effect */
-    }
-
-    /* Hide the "Phone" label and show alternate text on hover */
+     /* Hide the "Phone" label and show alternate text on hover */
     .phone:hover .phone-label {
         opacity: 0;
     }
@@ -809,36 +812,66 @@
         /* No effect on the phone number */
     }
 
-/* The footer container should be positioned relative to its contents */
-footer {
-    position: relative;
-    height: auto;
-    padding-bottom: 0; /* No extra padding at the bottom */
-    margin-bottom: 0; /* Remove margin */
-    overflow: hidden; /* To prevent overflow caused by transformed text */
-}
+    /* The footer container should be positioned relative to its contents */
+    footer {
+        position: relative;
+        height: auto;
+        padding-bottom: 0;
+        /* No extra padding at the bottom */
+        margin-bottom: 0;
+        /* Remove margin */
+        overflow: hidden;
+        /* To prevent overflow caused by transformed text */
+    }
 
-/* Keep the main container relative to position elements inside */
-.footer-container {
-    position: relative;
-    z-index: 1; /* Ensure content is above the footer-heading */
-    margin-bottom: 80px;
-}
+    /* Keep the main container relative to position elements inside */
+    .footer-container {
+        position: relative;
+        z-index: 1;
+        /* Ensure content is above the footer-heading */
+        margin-bottom: 80px;
+    }
 
-/* Styling for the LET'S COLLABORATE text */
-.footer-heading {
-    margin: 0;
-    transform: scaleY(7.6); /* Stretch the text vertically */
-    font-size: 100px; /* Adjusted for scaling */
-    letter-spacing: 45.2px; /* Space between the letters */
-    width: 100%; /* Full width */
-    padding: 0;
-    text-align: center; /* Center the text */
-    opacity: 0.05; /* Lower the opacity */
-    position: absolute; /* Position it absolutely within the footer */
-    bottom: 100px; /* Adjust this value to move the text higher */
-    left: 0; /* Align it to the left */
-    z-index: 0; /* Ensure it's behind the content */
-}
+    /* Styling for the LET'S COLLABORATE text */
+    .footer-heading {
+        margin: 0;
+        transform: scaleY(7.6);
+        /* Stretch the text vertically */
+        font-size: 100px;
+        /* Adjusted for scaling */
+        letter-spacing: 45.2px;
+        /* Space between the letters */
+        width: 100%;
+        /* Full width */
+        padding: 0;
+        text-align: center;
+        /* Center the text */
+        opacity: 0.05;
+        /* Lower the opacity */
+        position: absolute;
+        /* Position it absolutely within the footer */
+        bottom: 100px;
+        /* Adjust this value to move the text higher */
+        left: 0;
+        /* Align it to the left */
+        z-index: 0;
+        /* Ensure it's behind the content */
+    }
 
-
+    .background-image {
+        position: absolute;
+        /* Position the image absolutely */
+        top: 0;
+        /* Align to the top */
+        left: 0;
+        /* Align to the left */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        object-fit: cover;
+        /* Ensure the image covers the section */
+        z-index: -2;
+        /* Send the image to the back */
+        opacity: 0.2;
+    }

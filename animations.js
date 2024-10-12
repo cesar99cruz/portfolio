@@ -176,7 +176,7 @@ const hoverGifElements = document.querySelectorAll('.hover-gif');
 // Add event listeners for the hover-gif elements
 hoverGifElements.forEach(text => {
     text.addEventListener('mouseenter', () => {
-        expandCircle(2.5);  // Expand the circle when hovering over any hover-gif
+        expandCircle(2.3);  // Expand the circle when hovering over any hover-gif
     });
 
     text.addEventListener('mouseleave', () => {
@@ -212,15 +212,18 @@ hideCircle.forEach(link => {
     });
 });
 
-// Function to turn the text into a square when hovered
-function turnToSquare(word) {
-    word.classList.add('square'); // Add the 'square' class to the hovered text
-}
+// Add event listeners for mouse enter and leave on navbar links
+const columnsElement = document.querySelectorAll('.columns');
 
-// Function to revert the text back to its normal state when hover ends
-function revertToText(word) {
-    word.classList.remove('square'); // Remove the 'square' class
-}
+columnsElement.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over navbar links
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
+});
 
 // Add event listeners to each word (p element) for hover effects
 words.forEach(word => {
@@ -346,4 +349,79 @@ clientNames.forEach(client => {
 });
 
 
+// Smooth scrolling and link highlighting without # in the URL
 
+// When 'About' link is clicked
+document.getElementById("about-link").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default anchor link behavior to avoid adding '#' to the URL
+    document.getElementById("About").scrollIntoView({ behavior: "smooth" }); // Smoothly scroll to the 'About' section
+});
+
+// When 'Works' link is clicked
+document.getElementById("works-link").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    document.getElementById("Works").scrollIntoView({ behavior: "smooth" }); // Smoothly scroll to the 'Works' section
+});
+
+// When 'Contacts' link is clicked
+document.getElementById("contacts-link").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    document.getElementById("Contacts").scrollIntoView({ behavior: "smooth" }); // Smoothly scroll to the 'Contacts' section
+});
+
+// Change active link color on scroll
+window.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section"); // Get all sections on the page
+    const navLinks = document.querySelectorAll(".navbar-links a"); // Get all navigation links
+
+    let currentSection = ""; // Variable to hold the current section ID
+
+    // Loop through sections to determine which section is in view
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100; // Calculate the top position of each section (with an offset)
+        if (window.scrollY >= sectionTop) {
+            currentSection = section.getAttribute("id"); // Set the current section to the section in view
+        }
+    });
+
+    // Loop through navigation links to update active class
+    navLinks.forEach((link) => {
+        link.classList.remove("active"); // Remove active class from all links
+        if (link.id.includes(currentSection.toLowerCase())) {
+            link.classList.add("active"); // Add active class to the link corresponding to the current section
+        }
+    });
+});
+
+
+let currentIndex = 0; // Current slide index
+    const slides = document.querySelectorAll('.slide'); // Select all slides
+    const totalSlides = slides.length; // Total number of slides
+
+    // Function to show the current slide
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        // Show the current slide
+        slides[index].classList.add('active');
+    }
+
+    // Function to change slide every few seconds
+    function changeSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides; // Increment index and loop back to 0
+        showSlide(currentIndex); // Show the current slide
+    }
+
+    // Change slide every 3 seconds
+    setInterval(changeSlide, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+
+    const gifImage = document.querySelector('.hover-gif');
+
+    gifImage.addEventListener('mouseover', function() {
+        this.src = './media/logo_cesar_negative.gif'; // Change to the new GIF
+    });
+    
+    gifImage.addEventListener('mouseout', function() {
+        this.src = './media/logo_cesar.gif'; // Change back to the original GIF
+    });
+    

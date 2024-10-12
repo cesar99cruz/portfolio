@@ -27,23 +27,87 @@
     </body>
 
 
-    <script>
-        // JavaScript to animate the percentage from 0 to 100% over a set period of time
-        window.addEventListener("load", function () {
-            let percentage = 0;
-            const percentageDisplay = document.getElementById("loading-text");
-            const interval = setInterval(() => {
-                percentage++;
-                percentageDisplay.textContent = percentage + "%";  // Update the percentage display
+<script>
+    window.addEventListener("load", function () {
+        const mediaElements = document.querySelectorAll("img, video, iframe"); // Select all media elements
+        const totalMedia = mediaElements.length; // Total number of media elements
+        let loadedMediaCount = 0; // Track the number of loaded media
+        let displayedPercentage = 0; // Start with 0% displayed
+        const percentageDisplay = document.getElementById("loading-text");
+        let isFastComplete = false; // Flag to track fast completion
 
-                if (percentage === 100) {
-                    clearInterval(interval);  // Stop the interval once 100% is reached
-                    document.getElementById("loading-text").style.display = "none";  // Hide the loading screen after 100%
-                    document.getElementById("button").style.display = "block"
+        // Function to update the displayed percentage
+        function updateDisplayedPercentage() {
+            let targetPercentage = Math.floor((loadedMediaCount / totalMedia) * 100);
+
+            // Smooth percentage increment animation
+            const increment = setInterval(() => {
+                if (displayedPercentage < targetPercentage && !isFastComplete) {
+                    displayedPercentage++;
+                    percentageDisplay.textContent = displayedPercentage + "%"; // Update percentage display
+                } else if (isFastComplete && displayedPercentage < 100) {
+                    // If fast complete is triggered, increment to 100% by 1%
+                    displayedPercentage++;
+                    percentageDisplay.textContent = displayedPercentage + "%"; // Update percentage display
+                    if (displayedPercentage >= 100) {
+                        displayedPercentage = 100;
+                        clearInterval(increment);
+                        finishLoading(); // Call finish once 100% is reached
+                    }
+                } else {
+                    clearInterval(increment); // Stop incrementing when target is reached
                 }
-            }, 40);  // Adjust the speed by changing the interval time
+            }, 40); // Interval set to make the animation smooth (increase by 1 every 40ms)
+        }
+
+        // Function to update the actual loading percentage when a media loads
+        function mediaLoaded() {
+            loadedMediaCount++;
+            updateDisplayedPercentage();
+
+            // If all media is loaded, check if we need to fast-forward to 100%
+            if (loadedMediaCount === totalMedia) {
+                // Mark fast completion flag
+                isFastComplete = true;
+                // Speed up to 100% but increment by 1 at a time
+                updateDisplayedPercentage();
+            }
+        }
+
+        // Attach event listeners to media elements
+        mediaElements.forEach(media => {
+            if (media.complete) {
+                // If the media is already cached/loaded
+                mediaLoaded();
+            } else {
+                // Listen for when the media is fully loaded
+                media.addEventListener("load", mediaLoaded);
+                media.addEventListener("error", mediaLoaded); // If a media fails to load, still progress
+            }
         });
-    </script>
+
+        // Handle cases with no media elements
+        if (totalMedia === 0) {
+            // Animate to 100% directly if there are no media elements to load
+            const toHundred = setInterval(() => {
+                if (displayedPercentage < 100) {
+                    displayedPercentage++;
+                    percentageDisplay.textContent = displayedPercentage + "%";
+                } else {
+                    clearInterval(toHundred);
+                    finishLoading(); // Show the button and hide percentage when 100% is reached
+                }
+            }, 40); // Increase by 1 every 40ms
+        }
+
+        // Function to finalize loading once 100% is reached
+        function finishLoading() {
+            percentageDisplay.style.display = "none"; // Hide the loading text
+            document.getElementById("button").style.display = "block"; // Show the start button
+        }
+    });
+</script>
+
 </body>
 
 </html>
