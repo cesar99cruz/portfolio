@@ -424,4 +424,131 @@ let currentIndex = 0; // Current slide index
     gifImage.addEventListener('mouseout', function() {
         this.src = './media/logo_cesar.gif'; // Change back to the original GIF
     });
-    
+
+    // Get the logo element
+const logo = document.querySelector('.hover-gif'); // Adjust the selector based on your HTML structure
+
+// Add this function to handle logo collision effects
+function handleLogoCollision() {
+    // Check if the logo is currently colliding with the circle
+    if (isCollidingWithCircle(logo)) {
+        // Calculate the pull direction
+        const logoRect = logo.getBoundingClientRect();
+        const logoCenterX = logoRect.left + logoRect.width / 2;
+        const logoCenterY = logoRect.top + logoRect.height / 2;
+
+        const pullDirectionX = (currentX - logoCenterX) * forceFieldStrength;
+        const pullDirectionY = (currentY - logoCenterY) * forceFieldStrength;
+
+        // Apply the pull to the logo's position
+        logo.style.transform = `translate(${pullDirectionX}px, ${pullDirectionY}px)`;
+    } else {
+        // Reset logo to its original position if not colliding
+        logo.style.transform = `translate(0px, 0px)`; // Reset transform
+    }
+}
+
+// Modify the animateCircle function to include logo collision handling
+function animateCircle() {
+    // Smoothly interpolate between current position and target position
+    currentX += (targetX - currentX) * smoothness;
+    currentY += (targetY - currentY) * smoothness;
+
+    // Check for collisions with social media icons
+    let pulling = false; // Track if we're being pulled towards an icon
+
+    socialMediaIcons.forEach((icon) => {
+        if (handleIconCollision(icon)) {
+            pulling = true; // If any icon is colliding, set pulling to true
+        }
+    });
+
+    // Handle logo collision
+    handleLogoCollision(); // Check collision with the logo
+
+    // If we're being pulled towards an icon, adjust the target position
+    if (pulling) {
+        // Calculate the pull direction for icons as before
+        socialMediaIcons.forEach((icon) => {
+            if (isCollidingWithCircle(icon)) {
+                const iconRect = icon.getBoundingClientRect();
+                const iconCenterX = iconRect.left + iconRect.width / 2;
+                const iconCenterY = iconRect.top + iconRect.height / 2;
+
+                const pullDirectionX = (currentX - iconCenterX) * forceFieldStrength;
+                const pullDirectionY = (currentY - iconCenterY) * forceFieldStrength;
+
+                // Apply the pull to the icon's position
+                icon.style.transform = `translate(${pullDirectionX}px, ${pullDirectionY}px)`;
+            }
+        });
+    } else {
+        // Reset icons to their original positions if not colliding
+        socialMediaIcons.forEach((icon) => {
+            icon.style.transform = `translate(0px, 0px)`; // Reset transform
+        });
+    }
+
+    // Apply the new position to the circle
+    circle.style.left = `${currentX}px`;
+    circle.style.top = `${currentY}px`;
+
+    // Continue animating with requestAnimationFrame for smooth motion
+    requestAnimationFrame(animateCircle);
+}
+
+const fadeUpImagesLeftElement = document.querySelectorAll('.fade-up-images-left img');
+
+fadeUpImagesLeftElement.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over name
+        link.style.color = '';  // Change text color to black when circle disappears
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+        link.style.color = '';  // Reset text color back to original when circle reappears
+    });
+});
+
+const fadeUpImagesLeft1Element = document.querySelectorAll('.fade-up-images-left1 img');
+
+fadeUpImagesLeft1Element.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over name
+        link.style.color = '';  // Change text color to black when circle disappears
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+        link.style.color = '';  // Reset text color back to original when circle reappears
+    });
+});
+
+const fadeUpImagesRightElement = document.querySelectorAll('.fade-up-images-right img');
+
+fadeUpImagesRightElement.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over name
+        link.style.color = '';  // Change text color to black when circle disappears
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+        link.style.color = '';  // Reset text color back to original when circle reappears
+    });
+});
+
+const fadeUpImagesRight1Element = document.querySelectorAll('.fade-up-images-right1 img');
+
+fadeUpImagesRight1Element.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over name
+        link.style.color = '';  // Change text color to black when circle disappears
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+        link.style.color = '';  // Reset text color back to original when circle reappears
+    });
+});

@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>C&eacute;sar Cruz - Portfolio</title>
     <link rel="icon" href="./media/logo_cesar.png" type="icon-cesar-logo">
-    <link href="./styling.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styling.css">
+    <link rel="stylesheet" href="./media-styling.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -210,8 +212,8 @@
                     <p class="client-name" data-full-name="SÏMPLY" data-short-name="SÏMPLY">
                         SÏMPLY
                         <span class="text-hidden-sections">
-                            I created the brand, from ideating its values to designing a logo
-                            and visual identity, and I am currently working on the website.
+                            A streetwear brand created by me, from ideating its values to designing a logo
+                            and visual identity.
                         </span>
                     </p>
                 </div>
@@ -219,7 +221,7 @@
                     <p class="client-name" data-full-name="VOGUE PORTUGAL" data-short-name="VOGUE|">
                         VOGUE PORTUGAL
                         <span class="text-hidden-sections">
-                            I collaborated on a university project, designing the shower gel 
+                            I collaborated on a university project, designing the shower gel
                             packaging, including the visuals and bottle shape.
                         </span>
                     </p>
@@ -239,18 +241,73 @@
             </div>
         </div>
 
-
         <br><br><br>
         <br><br><br>
         <br><br><br>
         <br><br><br>
 
-        <div id="video-container">
+        <!--<div id="video-container">
             <video id="scrollVideo" autoplay loop muted>
                 <source src="./media/Placeholder-Video.mp4" type="video/mp4">
             </video>
-        </div>
+        </div>-->
 
+        <div class="scroll-section">
+            <div class="fade-up-images-left" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                data-aos-easing="linear" data-aos-duration="1500">
+                <a href="./siimply.html">
+                    <img max width="350px" src="./media/Siimply/Artboard 1 copy 10-100.jpg">
+                </a>
+                <div class="pop-up-right">
+                    <h1>Sïmply Streetwear</h1>
+                    <p>A streetwear brand created by me, <br>
+                        from ideating its values to designing <br>
+                        a logo and visual identity.
+                    </p>
+                </div>
+            </div>
+            <div class="fade-up-images-right" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="300">
+                <a href="./siimply.html">
+                    <img max width="350px" src="./media/Siimply/Artboard 1 copy 10-100.jpg">
+                </a>
+                <div class="pop-up-left">
+                    <h1>Sïmply Streetwear</h1>
+                    <p>A streetwear brand created by me, <br>
+                        from ideating its values to designing <br>
+                        a logo and visual identity.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-section" id="less-space">
+            <div class="fade-up-images-left" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+                data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="300">
+                <a href="./siimply.html">
+                    <img max width="350px" src="./media/Siimply/Artboard 1 copy 10-100.jpg">
+                </a>
+                <div class="pop-up-right">
+                    <h1>Sïmply Streetwear</h1>
+                    <p>A streetwear brand created by me, <br>
+                        from ideating its values to designing <br>
+                        a logo and visual identity.
+                    </p>
+                </div>
+            </div>
+            <div class="fade-up-images-right" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="300">
+                <a href="./siimply.html">
+                    <img max width="350px" src="./media/Siimply/Artboard 1 copy 10-100.jpg">
+                </a>
+                <div class="pop-up-left">
+                    <h1>Sïmply Streetwear</h1>
+                    <p>A streetwear brand created by me, <br>
+                        from ideating its values to designing <br>
+                        a logo and visual identity.
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <br><br><br>
         <br><br><br>
@@ -271,8 +328,6 @@
                 John Maeda
             </h6>
         </div>
-
-
     </section>
 
     <br><br><br>
@@ -321,6 +376,10 @@
     </section>
 
     <script defer src="./animations.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
