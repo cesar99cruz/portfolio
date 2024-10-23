@@ -2,6 +2,28 @@
             width: fit-content;
         }
 
+        /* Change scroll bar */
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #0C0A08;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #6C7BFF;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A9B8D2;
+        }
+
         /* Define a custom font using @font-face */
         @font-face {
             font-family: 'ITCAvantGardePro-Bold';
@@ -643,16 +665,25 @@
             transition: position 0.3s ease;
             /* Smooth transition when unpinning */
             padding: 100px 0;
+            border-radius: 25px;
+        }
+
+        .scroll-section img {
+            border-radius: 25px;
         }
 
         .fade-up-images-left {
             margin-top: -300px;
             display: inline-flex;
+            position: relative;
+            /* Ensure the pop-up is positioned relative to this container */
         }
 
         .fade-up-images-right {
             margin-top: 300px;
             display: inline-flex;
+            position: relative;
+            /* Ensure the pop-up is positioned relative to this container */
         }
 
         .pop-up-right {
@@ -661,17 +692,22 @@
             background-color: #6C7BFF;
             color: #0C0A08;
             padding: 50px;
-            transition: 0.2s ease-in;
+            transition: transform 0.6s ease, opacity 0.6s ease 0.1s;
             position: absolute;
             left: 350px;
             width: 350px;
             height: 74%;
             align-content: center;
             text-align: left;
+            transform: translateX(-50px);
+            /* Start off slightly to the right */
+            border-radius: 25px;
         }
 
         .fade-up-images-left a:hover+.pop-up-right {
             opacity: 1;
+            transform: translateX(0);
+            /* Move the pop-up back into its original position */
         }
 
         .pop-up-left {
@@ -680,17 +716,22 @@
             background-color: #6C7BFF;
             color: #0C0A08;
             padding: 50px;
-            transition: 0.2s ease-in;
+            transition: transform 0.6s ease, opacity 0.6s ease 0.1s;
             position: absolute;
             right: 350px;
             width: 350px;
             height: 74%;
             align-content: center;
             text-align: right;
+            transform: translateX(50px);
+            /* Start off slightly to the right */
+            border-radius: 25px;
         }
 
         .fade-up-images-right a:hover+.pop-up-left {
             opacity: 1;
+            transform: translateX(0);
+            /* Move the pop-up back into its original position */
         }
 
         #less-space {
@@ -941,3 +982,182 @@
             z-index: 0;
             /* Ensure it's behind the content */
         }
+
+        /* Start of Works Pages */
+        /* Start of Works Pages */
+        /* Start of Works Pages */
+
+
+        /* Size for the SVG */
+        .work-page-logo svg {
+            width: 200px;
+        }
+
+        /* Default styling for the logo */
+        .work-page-logo .cls-1 {
+            fill: #fff;
+            /* Default color */
+        }
+
+        /* Hover effect to change color */
+        .work-page-logo:hover .cls-1 {
+            fill: #53449e;
+            /* Change to red (you can set any color) */
+        }
+
+        .works-header {
+            position: relative;
+            /* Allows positioning of child elements like the logo */
+            max-width: 100vw;
+            margin-top: -62px;
+            /* Horizontally center the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner {
+            width: 100vw;
+            display: flex;
+            opacity: 0.5;
+        }
+
+        .logo {
+            position: absolute;
+            /* Position logo on top of the banner */
+            z-index: 1;
+            /* Ensure the logo is above the banner */
+            max-width: 1000px;
+            transform: translate(-50%, -50%);
+            /* Offset by 50% to truly center it */
+            opacity: 0;
+            /* Start invisible */
+            animation: fadeInUp 0.5s ease-out forwards;
+            animation-delay: 1s;
+            /* Apply the animation */
+        }
+
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+                /* Start 100px from the bottom */
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+                /* Move to original position */
+            }
+        }
+
+        .works-description {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            gap: -50px;
+        }
+
+        .works-description h5 {
+            font-size: 2em;
+            margin-top: 200px;
+        }
+
+        .works-description h1 {
+            font-size: 5em;
+            text-align: center;
+        }
+
+        .works-description h6 {
+            font-size: 1em;
+            font-weight: 200;
+        }
+
+        .works-container {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        #scrollVideo {
+            max-width: 90%;
+            margin-top: 150px;
+            border-radius: 50px;
+        }
+
+        .works-images {
+            width: 90%;
+            border-radius: 50px;
+        }
+
+
+        .programs-used {
+            display: flex;
+            /* Flexbox for aligning items inside the container */
+            justify-content: center;
+            /* Center icons horizontally */
+            align-items: center;
+            /* Center icons vertically if needed */
+            gap: 50px;
+            /* Optional: add some space between the icons */
+            max-width: 100%;
+            /* Let it take full available width */
+            margin: 0 auto;
+            /* Center the container horizontally */
+            margin-bottom: 100px;
+        }
+
+        .programs-used img {
+            max-width: 100px;
+        }
+
+        .programs-used-title h6 {
+            margin-top: 100px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(10px, -10px);
+            }
+
+            50% {
+                transform: translate(-10px, 10px);
+            }
+
+            75% {
+                transform: translate(10px, 10px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .programs-used img {
+            max-width: 100px;
+            animation: float 4s ease-in-out infinite;
+            /* Looping floating effect */
+        }
+
+        .programs-used img:nth-child(1) {
+            animation: float 5s ease-in-out infinite;
+            /* Different duration */
+        }
+
+        .programs-used img:nth-child(2) {
+            animation: float 4s ease-in-out infinite reverse;
+            /* Reversed direction */
+        }
+
+        

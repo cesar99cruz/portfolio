@@ -552,3 +552,42 @@ fadeUpImagesRight1Element.forEach(link => {
         link.style.color = '';  // Reset text color back to original when circle reappears
     });
 });
+
+// Add event listeners for mouse enter and leave logo
+const hideCirclelogo = document.querySelectorAll('.work-page-logo');
+
+hideCirclelogo.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over logo
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
+});
+
+// Add event listeners for mouse enter and leave logo
+const hideCircleimages = document.querySelectorAll('.works-container img');
+
+hideCircleimages.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over logo
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
+});
+
+// Add event listeners for mouse enter and leave logo
+const hideCirclevideo = document.querySelectorAll('.works-container video');
+
+hideCirclevideo.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over logo
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
+});
