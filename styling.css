@@ -224,6 +224,20 @@
             /* Bold text */
         }
 
+        .line-show{
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .hover-text:hover{
+            z-index: 10;
+        }
+
+        .hidden-text{
+            opacity: 0;
+        }
+
         /* About Section */
         .about-section {
             margin-top: 230px;
@@ -247,7 +261,7 @@
         .section-text {
             font-size: 3.2em !important;
             /* Font size for section text */
-            margin-left: 280px;
+            margin:0 280px !important;
             /* Left margin */
         }
 
@@ -294,19 +308,6 @@
             /* Secondary color text */
         }
 
-        /* Hidden text styles */
-        .hidden-text {
-            opacity: 0;
-            /* Start hidden */
-            background-color: transparent;
-            /* Transparent background */
-            font-size: 100pt;
-            /* Large font size */
-            font-family: 'ITCAvantGardePro-Bold', sans-serif;
-            /* Bold font */
-            width: 100%;
-            /* Full width for masking */
-        }
 
         /* Styles for hiding text */
         #hidding-text-div {
@@ -676,6 +677,7 @@
             margin-top: -300px;
             display: inline-flex;
             position: relative;
+
             /* Ensure the pop-up is positioned relative to this container */
         }
 
@@ -696,7 +698,7 @@
             position: absolute;
             left: 350px;
             width: 350px;
-            height: 74%;
+            height: 72%;
             align-content: center;
             text-align: left;
             transform: translateX(-50px);
@@ -720,7 +722,7 @@
             position: absolute;
             right: 350px;
             width: 350px;
-            height: 74%;
+            height: 72%;
             align-content: center;
             text-align: right;
             transform: translateX(50px);
@@ -1159,5 +1161,40 @@
             animation: float 4s ease-in-out infinite reverse;
             /* Reversed direction */
         }
+
+
+        .work-page-logo-typo svg {
+            width: 200px;
+        }
+
+        /* Default styling for the logo */
+        .work-page-logo-typo .cls-1 {
+            fill: #fff;
+            /* Default color */
+        }
+
+        /* Hover effect to change color */
+        .work-page-logo-typo:hover .cls-1 {
+            fill: #f37b00;
+            /* Change to red (you can set any color) */
+        }
+
+
+        .work-page-logo-if svg {
+            width: 100px;
+        }
+
+        /* Default styling for the logo */
+        .work-page-logo-if .cls-1 {
+            fill: #002a3a;
+            /* Default color */
+        }
+
+        /* Hover effect to change color */
+        .work-page-logo-if:hover .cls-1 {
+            fill: #fff;
+            /* Change to red (you can set any color) */
+        }
+        
 
         

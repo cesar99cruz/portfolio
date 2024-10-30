@@ -150,26 +150,14 @@ function expandCircle(scale) {
 // Add event listeners for the hover-text elements
 hoverTextElements.forEach(text => {
     text.addEventListener('mouseenter', () => {
-        expandCircle(8);  // Expand the circle when hovering over any hover-text
+        expandCircle(0);  // Expand the circle when hovering over any hover-text
     });
 
     text.addEventListener('mouseleave', () => {
         expandCircle(1);  // Collapse the circle back to original size when the cursor leaves
     });
 });
-
-// Add event listeners for the hover-text elements
-hiddenTextElements.forEach(text => {
-    text.addEventListener('mouseenter', () => {
-        expandCircle(8);  // Expand the circle when hovering over any hover-text
-    });
-
-    text.addEventListener('mouseleave', () => {
-        expandCircle(1);  // Collapse the circle back to original size when the cursor leaves
-    });
-});
-
-
+    
 // Get all elements with the hover-gif class
 const hoverGifElements = document.querySelectorAll('.hover-gif');
 
@@ -590,4 +578,32 @@ hideCirclevideo.forEach(link => {
     link.addEventListener('mouseleave', () => {
         expandCircle(1);  // Expand the circle back to original size when the cursor leaves
     });
+}); 
+
+
+// Add event listeners for mouse enter and leave logo
+const hideCirclelogo1 = document.querySelectorAll('.work-page-logo-typo');
+
+hideCirclelogo1.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over logo
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
 });
+
+// Add event listeners for mouse enter and leave logo
+const hideCirclelogo2 = document.querySelectorAll('.work-page-logo-if');
+
+hideCirclelogo2.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over logo
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
+});
+
