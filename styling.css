@@ -224,17 +224,17 @@
             /* Bold text */
         }
 
-        .line-show{
+        .line-show {
             display: block;
             text-align: center;
             width: 100%;
         }
 
-        .hover-text:hover{
+        .hover-text:hover {
             z-index: 10;
         }
 
-        .hidden-text{
+        .hidden-text {
             opacity: 0;
         }
 
@@ -261,7 +261,7 @@
         .section-text {
             font-size: 3.2em !important;
             /* Font size for section text */
-            margin:0 280px !important;
+            margin: 0 280px !important;
             /* Left margin */
         }
 
@@ -741,6 +741,12 @@
             padding: 0;
         }
 
+        #less-space-2 {
+            margin-top: -150px;
+            padding-right: 850px;
+            margin-bottom: -400px;
+        }
+
         .motto {
             background-color: transparent !important;
             /* Transparent background */
@@ -1085,6 +1091,18 @@
             gap: 50px;
         }
 
+        .yt_trailer{
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90%;
+        }
+
+        #scrollVideoYT {
+            max-width: 90%;
+            border-radius: 50px;
+        }
+
         #scrollVideo {
             max-width: 90%;
             margin-top: 150px;
@@ -1162,7 +1180,6 @@
             /* Reversed direction */
         }
 
-
         .work-page-logo-typo svg {
             width: 200px;
         }
@@ -1195,6 +1212,19 @@
             fill: #fff;
             /* Change to red (you can set any color) */
         }
-        
 
-        
+        .work-page-logo-clawsified svg {
+            width: 300px;
+        }
+
+        /* Default styling for the logo */
+        .work-page-logo-clawsified .cls-1 {
+            fill: #fff;
+            /* Default color */
+        }
+
+        /* Hover effect to change color */
+        .work-page-logo-clawsified:hover .cls-1 {
+            fill: #6C7BFF;
+            /* Change to red (you can set any color) */
+        }

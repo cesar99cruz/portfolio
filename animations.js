@@ -607,3 +607,31 @@ hideCirclelogo2.forEach(link => {
     });
 });
 
+// Add event listeners for mouse enter and leave logo
+const hideCirclelogo3 = document.querySelectorAll('.work-page-logo-clawsified');
+
+hideCirclelogo3.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over logo
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
+});
+
+
+// Add event listeners for mouse enter and leave logo
+const hideCircleYtTrailer = document.querySelectorAll('.yt_trailer');
+
+hideCircleYtTrailer.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        collapseCircle();  // Collapse the circle when hovering over logo
+    });
+
+    link.addEventListener('mouseleave', () => {
+        expandCircle(1);  // Expand the circle back to original size when the cursor leaves
+    });
+});
+
+
