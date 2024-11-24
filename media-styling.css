@@ -108,21 +108,26 @@
     }
 
     .circle {
-        opacity: 0;
+        display: none;
     }
 
     #navbar {
-        padding: 50px 280px 0px 50px;
+        padding: 50px 450px 0px 50px;
     }
 
     .line-shown {
-        margin-right: 220px;
+        margin-right: 385px;
         margin-top: 400px;
     }
 
     .about-section {
         margin-top: 500px;
-        margin-left: -100px;
+        margin-left: -150px;
+        margin-right: 220px;
+    }
+
+    .about-section img{
+        right: 200px;
     }
 
     .section-title {
@@ -137,39 +142,46 @@
     }
 
     .what-i-do-container {
-        margin-left: -100px;
+        margin-left: -150px;
     }
 
     .rows p {
-        font-size: 7em;
+        padding-top: 50px;
+        font-size: 6em;
     }
 
     .text-hidden-sections {
         padding-left: 500px;
-        padding-right: 120px !important;
-        padding-top: 40px;
+        padding-right: 300px !important;
+        padding-bottom: 20px;
     }
 
     .works-section {
-        margin-left: -100px;
+        margin-left: -150px;
+        margin-right: 220px;
     }
 
     .history-container {
-        margin-left: -100px;
+        margin-left: -150px;
     }
 
     .clients-container {
-        margin-left: -100px;
+        margin-left: -150px;
+        margin-top: 40px;
     }
 
-    .clients-container p {
-        font-size: 5em;
-        padding-top: 40px;
-        padding-bottom: 20px;
+    .client-name {
+        font-size: 5em !important;
+        margin-top: 20px;
+    }
+
+    .clients-container span {
+        font-size: 0.3em !important;
     }
 
     .clients-container .text-hidden-sections {
         margin-right: 50px;
+
     }
 
     .scroll-section {
