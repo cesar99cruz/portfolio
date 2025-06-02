@@ -20,10 +20,9 @@
 
 <body>
     <script>
-      // Only redirect if this is the user's first time
       if (!localStorage.getItem("visited")) {
         localStorage.setItem("visited", "true");
-        window.location.replace("/loading-page");
+        window.location.href = "/loading-page";
       }
     </script>
 
