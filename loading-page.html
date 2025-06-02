@@ -28,6 +28,19 @@
 
 
 <script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Show the button however you're doing it
+    document.getElementById("button").style.display = "block";
+
+    // Add click listener to the Start button
+    document.getElementById("start-btn").addEventListener("click", function () {
+      localStorage.setItem("saw_loading_page", "true");
+      window.location.href = "/";
+    });
+  });
+
+
     window.addEventListener("load", function () {
         const mediaElements = document.querySelectorAll("img, video, iframe"); // Select all media elements
         const totalMedia = mediaElements.length; // Total number of media elements
