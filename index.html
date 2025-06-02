@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="0; url=/loading-page" />
     <script>
-      window.location.href = "/loading-page";
+      // Redirect to /loading-page only once
+      if (!localStorage.getItem("saw_loading_page")) {
+        window.location.href = "/loading-page/index.html";
+      }
     </script>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>C&eacute;sar Cruz - Portfolio</title>
