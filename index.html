@@ -3,15 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/loading-page" />
-    <script>
-      // Redirect to /loading-page only once
-      if (!localStorage.getItem("saw_loading_page")) {
-        window.location.href = "/loading-page/index.html";
-      }
-    </script>
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>C&eacute;sar Cruz - Portfolio</title>
     <link rel="icon" href="./media/logo_cesar.png" type="icon-cesar-logo">
@@ -23,13 +14,6 @@
 </head>
 
 <body>
-    <script>
-      if (!localStorage.getItem("visited")) {
-        localStorage.setItem("visited", "true");
-        window.location.href = "/loading-page";
-      }
-    </script>
-
     <!-- Circle element that will follow the cursor -->
     <div class="circle"></div>
 
