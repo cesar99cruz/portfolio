@@ -8,7 +8,6 @@
       window.location.href = "/loading-page";
     </script>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>C&eacute;sar Cruz - Portfolio</title>
     <link rel="icon" href="./media/logo_cesar.png" type="icon-cesar-logo">
@@ -21,6 +20,7 @@
 
 <body>
     <script>
+      // Only redirect if this is the user's first time
       if (!localStorage.getItem("visited")) {
         localStorage.setItem("visited", "true");
         window.location.replace("/loading-page");
